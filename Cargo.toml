@@ -1,0 +1,42 @@
+[package]
+name = "engine"
+version = "0.1.0"
+edition="2018"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+wasm-bindgen = { version = "0.2.78",features = ["serde-serialize"]} 
+derive_more = "^0.99.16"
+js-sys = "0.3.55"
+wasm-bindgen-futures = "0.4.28"
+serde = { version = "1.0.80", features = ["derive"] }
+serde_derive = "^1.0.59"
+
+
+[dependencies.web-sys]
+version = "0.3.4"
+features = [
+  'Document',
+  'Element',
+  'HtmlCanvasElement',
+  'HtmlImageElement',
+  'HtmlBodyElement',
+  'EventTarget',
+  'MouseEvent',
+  'KeyboardEvent',
+  'WebGlBuffer',
+  'WebGlVertexArrayObject',
+  'WebGl2RenderingContext',
+  'WebGlProgram',
+  'WebGlUniformLocation',
+  'WebGlShader',
+  'WebGlTexture',
+  'Window',
+  'Headers',
+  'Request',
+  'RequestInit',
+  'RequestMode',
+  'Response',
+]
